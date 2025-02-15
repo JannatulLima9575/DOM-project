@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Manipulation Example</title>
+</head>
+<body>
+    <h1 id="header">Hello World</h1>
+    <button id="changeButton">Change Text</button>
+    <button id="colorButton">Change Color</button>
+
+    <script>
+        // Selecting the elements
+        let header = document.getElementById('header');
+        let changeButton = document.getElementById('changeButton');
+        let colorButton = document.getElementById('colorButton');
+
+        // Change the text of the header when the button is clicked
+        changeButton.addEventListener('click', function() {
+            header.textContent = "Text Changed!";
+        });
+
+        // Change the color of the header when the other button is clicked
+        colorButton.addEventListener('click', function() {
+            header.style.color = "red";
+        });
+    </script>
+</body>
+</html>
