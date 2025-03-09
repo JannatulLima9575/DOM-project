@@ -3,28 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DOM Manipulation Example</title>
+    <title>Change Background Color</title>
+    <style>
+        body {
+            text-align: center;
+            transition: background-color 0.3s ease-in-out;
+        }
+        .btn {
+            padding: 10px 20px;
+            margin: 10px;
+            border: none;
+            cursor: pointer;
+            font-size: 18px;
+            color: white;
+        }
+        .red { background-color: red; }
+        .blue { background-color: blue; }
+        .green { background-color: green; }
+        .yellow { background-color: orange; }
+    </style>
 </head>
 <body>
-    <h1 id="header">Hello World</h1>
-    <button id="changeButton">Change Text</button>
-    <button id="colorButton">Change Color</button>
+
+    <h1>Click a Button to Change Background Color</h1>
+    
+    <button class="btn red" onclick="changeBg('red')">Red</button>
+    <button class="btn blue" onclick="changeBg('blue')">Blue</button>
+    <button class="btn green" onclick="changeBg('green')">Green</button>
+    <button class="btn yellow" onclick="changeBg('orange')">Orange</button>
 
     <script>
-        // Selecting the elements
-        let header = document.getElementById('header');
-        let changeButton = document.getElementById('changeButton');
-        let colorButton = document.getElementById('colorButton');
-
-        // Change the text of the header when the button is clicked
-        changeButton.addEventListener('click', function() {
-            header.textContent = "Text Changed!";
-        });
-
-        // Change the color of the header when the other button is clicked
-        colorButton.addEventListener('click', function() {
-            header.style.color = "red";
-        });
+        function changeBg(color) {
+            document.body.style.backgroundColor = color;
+        }
     </script>
+
 </body>
 </html>
